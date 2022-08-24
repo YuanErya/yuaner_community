@@ -1,6 +1,7 @@
 package com.yuanerya.yuaner_community.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.yuanerya.yuaner_community.model.dto.LoginDTO;
 import com.yuanerya.yuaner_community.model.dto.RegisterDTO;
 import com.yuanerya.yuaner_community.model.entity.YeUser;
 
@@ -12,4 +13,5 @@ public interface IYeUserService extends IService<YeUser> {
      * @return
      */
     YeUser register(RegisterDTO dto);
+    String login(LoginDTO dto);
 }

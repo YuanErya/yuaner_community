@@ -10,24 +10,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4286836a-cf1d-4452-8a67-3a265a3cb161" name="Default Changelist" comment="完成基本结构的搭建，正在完善注册功能">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/common/api/ApiErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/common/api/ApiResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/common/api/IErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/common/exception/ApiAsserts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/common/exception/ApiException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/common/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/controller/YeUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ce73f6e-b2a0-41f8-b84d-1e7a7a339d8f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7ce73f6e-b2a0-41f8-b84d-1e7a7a339d8f.xml" afterDir="false" />
+    <list default="true" id="4286836a-cf1d-4452-8a67-3a265a3cb161" name="Default Changelist" comment="注册功能已完成">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/jwt/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/model/dto/LoginDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/YuanerCommunityApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/YuanerCommunityApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/mapper/YeUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/mapper/YeUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/model/dto/RegisterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/model/dto/RegisterDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/controller/YeUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/controller/YeUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/YuanerCommunityApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/YuanerCommunityApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/controller/YeUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/controller/YeUserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/IYeUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/IYeUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/impl/IYeUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/impl/IYeUserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +101,7 @@
       <workItem from="1661245329812" duration="322000" />
       <workItem from="1661245672097" duration="3588000" />
       <workItem from="1661307134233" duration="10037000" />
-      <workItem from="1661319606532" duration="2506000" />
+      <workItem from="1661319606532" duration="6594000" />
     </task>
     <task id="LOCAL-00001" summary="完成基本结构的搭建，正在完善注册功能">
       <created>1661309473732</created>
@@ -117,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661309473732</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="注册功能已完成">
+      <created>1661322297566</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661322297566</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +137,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完成基本结构的搭建，正在完善注册功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成基本结构的搭建，正在完善注册功能" />
+    <MESSAGE value="注册功能已完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="注册功能已完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="227" y="18" key="#Plugins" timestamp="1661245710257">
@@ -152,10 +153,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="491" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1661246382767" />
-    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1661309725365">
+    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1661328346508">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1661309725365" />
+    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1661328346508" />
     <state x="335" y="331" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1661313510050">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -164,38 +165,38 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1661319743693" />
-    <state width="1493" height="307" key="GridCell.Tab.0.bottom" timestamp="1661322007856">
+    <state width="1024" height="208" key="GridCell.Tab.0.bottom" timestamp="1661330428276">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661322007856" />
-    <state width="1493" height="307" key="GridCell.Tab.0.center" timestamp="1661322007856">
+    <state width="1024" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661330428276" />
+    <state width="1024" height="208" key="GridCell.Tab.0.center" timestamp="1661330428276">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1661322007856" />
-    <state width="1493" height="307" key="GridCell.Tab.0.left" timestamp="1661322007856">
+    <state width="1024" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1661330428276" />
+    <state width="1024" height="208" key="GridCell.Tab.0.left" timestamp="1661330428276">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1661322007856" />
-    <state width="1493" height="307" key="GridCell.Tab.0.right" timestamp="1661322007856">
+    <state width="1024" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1661330428276" />
+    <state width="1024" height="208" key="GridCell.Tab.0.right" timestamp="1661330428276">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1661322007856" />
-    <state width="1493" height="307" key="GridCell.Tab.1.bottom" timestamp="1661322007857">
+    <state width="1024" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1661330428276" />
+    <state width="1493" height="307" key="GridCell.Tab.1.bottom" timestamp="1661330428267">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661322007857" />
-    <state width="1493" height="307" key="GridCell.Tab.1.center" timestamp="1661322007857">
+    <state width="1493" height="307" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661330428267" />
+    <state width="1493" height="307" key="GridCell.Tab.1.center" timestamp="1661330428267">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1661322007857" />
-    <state width="1493" height="307" key="GridCell.Tab.1.left" timestamp="1661322007856">
+    <state width="1493" height="307" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1661330428267" />
+    <state width="1493" height="307" key="GridCell.Tab.1.left" timestamp="1661330428267">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1661322007856" />
-    <state width="1493" height="307" key="GridCell.Tab.1.right" timestamp="1661322007857">
+    <state width="1493" height="307" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1661330428267" />
+    <state width="1493" height="307" key="GridCell.Tab.1.right" timestamp="1661330428267">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1661322007857" />
+    <state width="1493" height="307" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1661330428267" />
     <state width="1493" height="258" key="GridCell.Tab.2.bottom" timestamp="1661319573603">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
