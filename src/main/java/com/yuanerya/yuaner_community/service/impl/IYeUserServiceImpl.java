@@ -56,5 +56,10 @@ public class IYeUserServiceImpl extends ServiceImpl<YeUserMapper,YeUser> impleme
         return token;
     }
 
+    @Override
+    public YeUser getYeUserByUsername(String username) {
+        return baseMapper.selectOne(new LambdaQueryWrapper<YeUser>().eq(YeUser::getUsername, username));
+    }
+
 
 }

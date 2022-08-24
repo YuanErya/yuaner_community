@@ -41,10 +41,6 @@ public class YeUser implements Serializable {
     @TableField("score")
     private Integer score = 0;
 
-    @JsonIgnore
-    @TableField("token")
-    private String token;
-
     @Builder.Default
     @TableField("introduction")
     private String bio = "这个人很神秘 ，暂时没有设置简介！";

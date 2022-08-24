@@ -4572,72 +4572,65 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="1119" parent="379" name="token">
+    <column id="1119" parent="379" name="introduction">
       <Position>7</Position>
-      <Comment>token</Comment>
-      <DataType>varchar(255)|0s</DataType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="1120" parent="379" name="introduction">
-      <Position>8</Position>
       <Comment>个人简介</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="1121" parent="379" name="active">
-      <Position>9</Position>
+    <column id="1120" parent="379" name="active">
+      <Position>8</Position>
       <Comment>是否激活，1：是，0：否</Comment>
       <DataType>bit(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>b&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="1122" parent="379" name="status">
-      <Position>10</Position>
+    <column id="1121" parent="379" name="status">
+      <Position>9</Position>
       <Comment>状态，1：使用，0：停用</Comment>
       <DataType>bit(1)|0s</DataType>
       <DefaultExpression>b&apos;1&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="1123" parent="379" name="role_id">
-      <Position>11</Position>
+    <column id="1122" parent="379" name="role_id">
+      <Position>10</Position>
       <Comment>用户角色</Comment>
       <DataType>int|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="1124" parent="379" name="create_time">
-      <Position>12</Position>
+    <column id="1123" parent="379" name="create_time">
+      <Position>11</Position>
       <Comment>加入时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="1125" parent="379" name="modify_time">
-      <Position>13</Position>
+    <column id="1124" parent="379" name="modify_time">
+      <Position>12</Position>
       <Comment>修改时间</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="1126" parent="379" name="user_name">
+    <index id="1125" parent="379" name="user_name">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="1127" parent="379" name="user_email">
+    <index id="1126" parent="379" name="user_email">
       <ColNames>email</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="1128" parent="379" name="user_create_time">
+    <index id="1127" parent="379" name="user_create_time">
       <ColNames>create_time</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1129" parent="379" name="PRIMARY">
+    <key id="1128" parent="379" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="1130" parent="379" name="user_name">
+    <key id="1129" parent="379" name="user_name">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>user_name</UnderlyingIndexName>
     </key>
