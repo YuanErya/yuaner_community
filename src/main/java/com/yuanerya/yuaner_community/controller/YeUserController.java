@@ -52,10 +52,19 @@ public class YeUserController {
      * @param userName
      * @return
      */
-    @RequestMapping(value = "/info", method = RequestMethod.GET)
+    @GetMapping(value = "/info")
     public ApiResult<YeUser> getUser(@RequestHeader(value = USER_NAME) String userName) {
        YeUser user = iYeUserService.getYeUserByUsername(userName);
         return ApiResult.success(user);
+    }
+
+    /**
+     * 注销登录
+     * @return
+     */
+    @GetMapping(value = "/logout")
+    public ApiResult<Object> logOut() {
+        return ApiResult.success(null, "注销成功");
     }
 
 }

@@ -53,7 +53,9 @@ public class TokenInterceptor implements HandlerInterceptor {
 
     private boolean isProtectedUrl(HttpServletRequest request) {
         List<String> protectedPaths = new ArrayList<String>();
+        //向list中添加需要保护拦截的请求
         protectedPaths.add("/user/info");
+        protectedPaths.add("/user/logout");
         boolean bFind = false;
         for( String passedPath : protectedPaths ) {
             bFind = pathMatcher.match(passedPath, request.getServletPath());
