@@ -4579,7 +4579,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="1120" parent="379" name="bio">
+    <column id="1120" parent="379" name="introduction">
       <Position>8</Position>
       <Comment>个人简介</Comment>
       <DataType>varchar(255)|0s</DataType>

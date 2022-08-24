@@ -5,6 +5,6 @@ import com.yuanerya.yuaner_community.model.entity.YeUser;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface YeUserMapper  extends BaseMapper<YeUser> {
+public interface YeUserMapper extends BaseMapper<YeUser> {
 
 }
