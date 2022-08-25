@@ -12,7 +12,7 @@ import java.util.Date;
 
 @Data
 @Builder
-@TableName("ye_answer")
+@TableName("ye_comment")
 @AllArgsConstructor
 @NoArgsConstructor
 public class YeComment implements Serializable {
