@@ -11,8 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4286836a-cf1d-4452-8a67-3a265a3cb161" name="Default Changelist" comment="修改数据库表">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/controller/YeUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/controller/YeUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/interceptor/TokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/interceptor/TokenInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/jwt/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/model/entity/YeUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/model/entity/YeUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/interceptor/TokenInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/interceptor/TokenInterceptor.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +57,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Homework/lost-found" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../参考/大作业参考/doubao_community_backend" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
@@ -94,6 +98,7 @@
       <workItem from="1661245672097" duration="3588000" />
       <workItem from="1661307134233" duration="10037000" />
       <workItem from="1661319606532" duration="16084000" />
+      <workItem from="1661386663477" duration="9706000" />
     </task>
     <task id="LOCAL-00001" summary="完成基本结构的搭建，正在完善注册功能">
       <created>1661309473732</created>
@@ -177,46 +182,50 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="335" y="331" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.816@0.0.1536.816" timestamp="1661313510050" />
+    <state x="520" y="275" width="497" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1661399088040">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="520" y="275" width="497" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.816@0.0.1536.816" timestamp="1661399088040" />
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1661345521663">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1661345521663" />
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1661345742786">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1661386697098">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1661345742786" />
-    <state width="1493" height="307" key="GridCell.Tab.0.bottom" timestamp="1661350522210">
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1661386697098" />
+    <state width="1493" height="307" key="GridCell.Tab.0.bottom" timestamp="1661404062137">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661350522210" />
-    <state width="1493" height="307" key="GridCell.Tab.0.center" timestamp="1661350522210">
+    <state width="1493" height="307" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661404062137" />
+    <state width="1493" height="307" key="GridCell.Tab.0.center" timestamp="1661404062136">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1661350522210" />
-    <state width="1493" height="307" key="GridCell.Tab.0.left" timestamp="1661350522210">
+    <state width="1493" height="307" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1661404062136" />
+    <state width="1493" height="307" key="GridCell.Tab.0.left" timestamp="1661404062136">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1661350522210" />
-    <state width="1493" height="307" key="GridCell.Tab.0.right" timestamp="1661350522210">
+    <state width="1493" height="307" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1661404062136" />
+    <state width="1493" height="307" key="GridCell.Tab.0.right" timestamp="1661404062136">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1661350522210" />
-    <state width="1493" height="307" key="GridCell.Tab.1.bottom" timestamp="1661350522210">
+    <state width="1493" height="307" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1661404062136" />
+    <state width="1493" height="307" key="GridCell.Tab.1.bottom" timestamp="1661404062137">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661350522210" />
-    <state width="1493" height="307" key="GridCell.Tab.1.center" timestamp="1661350522210">
+    <state width="1493" height="307" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661404062137" />
+    <state width="1493" height="307" key="GridCell.Tab.1.center" timestamp="1661404062137">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1661350522210" />
-    <state width="1493" height="307" key="GridCell.Tab.1.left" timestamp="1661350522210">
+    <state width="1493" height="307" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1661404062137" />
+    <state width="1493" height="307" key="GridCell.Tab.1.left" timestamp="1661404062137">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1661350522210" />
-    <state width="1493" height="307" key="GridCell.Tab.1.right" timestamp="1661350522210">
+    <state width="1493" height="307" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1661404062137" />
+    <state width="1493" height="307" key="GridCell.Tab.1.right" timestamp="1661404062137">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="307" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1661350522210" />
+    <state width="1493" height="307" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1661404062137" />
     <state width="1493" height="258" key="GridCell.Tab.2.bottom" timestamp="1661319573603">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

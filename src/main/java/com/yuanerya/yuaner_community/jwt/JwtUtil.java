@@ -28,16 +28,32 @@ public class JwtUtil {
         return jwt; //jwt前面一般都会加Bearer
     }
 
-    public static HttpServletRequest validateTokenAndAddUserIdToHeader(HttpServletRequest request) {
+    /**
+     * 根据token解析出userNaME
+     * @param token
+     * @return
+     */
+    public static String parseToken(String token) {
+        Map<String, Object> body = Jwts.parser()
+                .setSigningKey(SECRET)
+                .parseClaimsJws(token.replace(TOKEN_PREFIX, ""))
+                .getBody();
+        String userName=String.valueOf(body.get(USER_NAME));
+        return userName;
+    }
+
+
+
+    public static void validateTokenAndAddUserIdToHeader(HttpServletRequest request) {
         String token = request.getHeader(HEADER_STRING);
         if (token != null) {
-            // parse the token.
+            // 解析token
             try {
                 Map<String, Object> body = Jwts.parser()
                         .setSigningKey(SECRET)
                         .parseClaimsJws(token.replace(TOKEN_PREFIX, ""))
                         .getBody();
-                return new CustomHttpServletRequest(request, body);
+                return ;
             } catch (Exception e) {
                 logger.info(e.getMessage());
                 throw new TokenValidationException(e.getMessage());
@@ -47,24 +63,6 @@ public class JwtUtil {
         }
     }
 
-    public static class CustomHttpServletRequest extends HttpServletRequestWrapper {
-        private Map<String, String> claims;
-
-        public CustomHttpServletRequest(HttpServletRequest request, Map<String, ?> claims) {
-            super(request);
-            this.claims = new HashMap<>();
-            claims.forEach((k, v) -> this.claims.put(k, String.valueOf(v)));
-        }
-
-        @Override
-        public Enumeration<String> getHeaders(String name) {
-            if (claims != null && claims.containsKey(name)) {
-                return Collections.enumeration(Arrays.asList(claims.get(name)));
-            }
-            return super.getHeaders(name);
-        }
-
-    }
 
     static class TokenValidationException extends RuntimeException {
         public TokenValidationException(String msg) {

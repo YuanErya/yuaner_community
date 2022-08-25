@@ -26,7 +26,7 @@ public class TokenInterceptor implements HandlerInterceptor {
             if(isProtectedUrl(request)) {
 //                System.out.println(request.getMethod());
                 if(!request.getMethod().equals("OPTIONS")) {
-                    request = JwtUtil.validateTokenAndAddUserIdToHeader(request);
+                    JwtUtil.validateTokenAndAddUserIdToHeader(request);
                     return true;
                 }else{
                     return true;

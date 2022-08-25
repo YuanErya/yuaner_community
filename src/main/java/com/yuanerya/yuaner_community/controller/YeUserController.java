@@ -1,6 +1,7 @@
 package com.yuanerya.yuaner_community.controller;
 
 import com.yuanerya.yuaner_community.common.api.ApiResult;
+import com.yuanerya.yuaner_community.jwt.JwtUtil;
 import com.yuanerya.yuaner_community.model.dto.LoginDTO;
 import com.yuanerya.yuaner_community.model.dto.RegisterDTO;
 import com.yuanerya.yuaner_community.model.entity.YeUser;
@@ -12,6 +13,7 @@ import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.yuanerya.yuaner_community.jwt.JwtUtil.HEADER_STRING;
 import static com.yuanerya.yuaner_community.jwt.JwtUtil.USER_NAME;
 
 
@@ -47,13 +49,14 @@ public class YeUserController {
     }
 
     /**
-     * 进行token验证，验证成功后，通过Header获取到userName,
+     * 进行token验证，验证成功后，通过Header获取到tokren,进行解析得到用户名
      * 根据UserName再到数据库中进行查询，获取到用户的全部信息
-     * @param userName
-     * @return
+     * @param token
+     * @return 用户信息
      */
     @GetMapping(value = "/info")
-    public ApiResult<YeUser> getUser(@RequestHeader(value = USER_NAME) String userName) {
+    public ApiResult<YeUser> getUser(@RequestHeader(value = HEADER_STRING) String token) {
+        String userName = JwtUtil.parseToken(token);
        YeUser user = iYeUserService.getYeUserByUsername(userName);
         return ApiResult.success(user);
     }

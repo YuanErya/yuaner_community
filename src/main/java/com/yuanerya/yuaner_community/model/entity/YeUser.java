@@ -43,7 +43,7 @@ public class YeUser implements Serializable {
 
     @Builder.Default
     @TableField("introduction")
-    private String bio = "这个人很神秘 ，暂时没有设置简介！";
+    private String introduction = "这个人很神秘 ，暂时没有设置简介！";
 
     @Builder.Default
     @TableField("active")
