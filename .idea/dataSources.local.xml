@@ -13,6 +13,7 @@
         <introspection-scope>
           <node kind="schema">
             <name qname="@" />
+            <name qname="information_schema" />
             <name qname="ye_community" />
           </node>
         </introspection-scope>

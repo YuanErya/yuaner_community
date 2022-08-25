@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yuanerya.yuaner_community.mapper.YeQuestionMapper">
+    <resultMap id="questionVO" type="com.yuanerya.yuaner_community.model.vo.QuestionVO">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="user_id" property="userId"/>
+        <result column="content" property="content"/>
+        <result column="answer_num" property="answerNum"/>
+        <result column="create_time" property="createTime"/>
+        <result column="modify_time" property="modifyTime"/>
+        <result column="username" property="username"/>
+        <result column="alias" property="alias"/>
+    </resultMap>
+
+    <select id="getPage" resultMap="questionVO">
+        SELECT
+        t.id,t.title,t.user_id,t.answer_num,t.content,
+        t.create_time ,t.modify_time ,
+        u.username,u.alias
+        FROM ye_question t
+        LEFT JOIN ye_user u
+        ON t.user_id = u.id
+    </select>
+
+
+
+</mapper>

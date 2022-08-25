@@ -14,7 +14,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.yuanerya.yuaner_community.jwt.JwtUtil.HEADER_STRING;
-import static com.yuanerya.yuaner_community.jwt.JwtUtil.USER_NAME;
 
 
 @RestController
