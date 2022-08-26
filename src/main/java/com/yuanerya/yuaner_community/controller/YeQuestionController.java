@@ -78,6 +78,13 @@ public class YeQuestionController {
         return ApiResult.success(answer);
     }
 
+    /**
+     * 对 问题的回答进行评论
+     * @param token
+     * @param answer_id
+     * @param dto
+     * @return
+     */
     @PostMapping("/answer/comment")
     public ApiResult<YeComment> comment(@RequestHeader(value = HEADER_STRING) String token,
                                         @RequestHeader(value = "answer_id") String answer_id,

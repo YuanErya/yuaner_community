@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.yuanerya.yuaner_community.model.dto.LoginDTO;
 import com.yuanerya.yuaner_community.model.dto.RegisterDTO;
 import com.yuanerya.yuaner_community.model.entity.YeUser;
+import com.yuanerya.yuaner_community.model.vo.FootPrintVO;
 
 public interface IYeUserService extends IService<YeUser> {
 
@@ -27,4 +28,11 @@ public interface IYeUserService extends IService<YeUser> {
      * @return
      */
     YeUser getYeUserByUsername(String username);
+
+    /**
+     * 根据用户的Id在各个表中查询发表的记录
+     * @param userId 获取到用户的ID
+     * @return 返回VO
+     */
+    FootPrintVO getFootprint(String userId);
 }

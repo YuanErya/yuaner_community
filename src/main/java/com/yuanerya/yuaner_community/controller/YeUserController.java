@@ -5,6 +5,7 @@ import com.yuanerya.yuaner_community.jwt.JwtUtil;
 import com.yuanerya.yuaner_community.model.dto.LoginDTO;
 import com.yuanerya.yuaner_community.model.dto.RegisterDTO;
 import com.yuanerya.yuaner_community.model.entity.YeUser;
+import com.yuanerya.yuaner_community.model.vo.FootPrintVO;
 import com.yuanerya.yuaner_community.service.IYeUserService;
 import org.springframework.web.bind.annotation.*;
 
@@ -58,6 +59,18 @@ public class YeUserController {
         String userName = JwtUtil.parseToken(token);
        YeUser user = iYeUserService.getYeUserByUsername(userName);
         return ApiResult.success(user);
+    }
+
+    /**
+     * 获取我所发布的问题，回答和评论
+     * @param token 通过Header获取到tokren,进行解析得到用户名根据UserName再到数据库中进行查询，获取到用户ID
+     * @return
+     */
+    @GetMapping("/getFootprint")
+    public ApiResult<FootPrintVO> getFootprint(@RequestHeader(value = HEADER_STRING) String token){
+        String userName = JwtUtil.parseToken(token);
+        String userId=iYeUserService.getYeUserByUsername(userName).getId();
+        return ApiResult.success(iYeUserService.getFootprint(userId));
     }
 
     /**
