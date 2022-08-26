@@ -9,5 +9,5 @@ import com.yuanerya.yuaner_community.model.entity.YeUser;
 
 public interface IYeCommentService extends IService<YeComment> {
     YeComment comment(AnswerAndCommentDTO dto, YeUser user, String answer_id);
-    ApiResult delete(String comment_id);
+    ApiResult delete(String comment_id,String user_id);
 }

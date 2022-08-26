@@ -36,10 +36,15 @@ public class IYeAnswerServiceImpl extends ServiceImpl<YeAnswerMapper,YeAnswer> i
     }
 
     @Override
-    public ApiResult delete(String answer_id) {
+    public ApiResult delete(String answer_id,String user_id) {
         try {
-            yeAnswerMapper.deleteById(answer_id);
-            yeCommentMapper.deleteByAnswerId(answer_id);
+            if(yeAnswerMapper.selectById(answer_id).getUserId().equals(user_id)){
+                yeAnswerMapper.deleteById(answer_id);
+                yeCommentMapper.deleteByAnswerId(answer_id);}
+            else{
+                return ApiResult.failed("非法操作，您只能删除你自己的回答！");
+            }
+
         }catch (Exception e) {
             return ApiResult.failed("操作失败");
         }

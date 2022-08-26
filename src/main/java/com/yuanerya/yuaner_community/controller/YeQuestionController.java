@@ -110,7 +110,9 @@ public class YeQuestionController {
     @DeleteMapping("/delete/question")
     public ApiResult deleteQuestion(@RequestHeader(value = HEADER_STRING) String token,
                                     @RequestHeader(value = "question_id") String question_id) {
-        return iYeQuestionService.delete(question_id);
+        String userName = JwtUtil.parseToken(token);
+        String user_id = iYeUserService.getYeUserByUsername(userName).getId();
+        return iYeQuestionService.delete(question_id,user_id);
     }
 
     /**
@@ -121,7 +123,9 @@ public class YeQuestionController {
     @DeleteMapping("/delete/answer")
     public ApiResult deleteAnswer(@RequestHeader(value = HEADER_STRING) String token,
                                   @RequestHeader(value = "answer_id") String answer_id) {
-        return iYeAnswerService.delete(answer_id);
+        String userName = JwtUtil.parseToken(token);
+        String user_id = iYeUserService.getYeUserByUsername(userName).getId();
+        return iYeAnswerService.delete(answer_id,user_id);
     }
 
     /**
@@ -132,7 +136,9 @@ public class YeQuestionController {
     @DeleteMapping("/delete/comment")
     public ApiResult deleteComment(@RequestHeader(value = HEADER_STRING) String token,
                                    @RequestHeader(value = "comment_id") String comment_id) {
-        return iYeCommentService.delete(comment_id);
+        String userName = JwtUtil.parseToken(token);
+        String user_id = iYeUserService.getYeUserByUsername(userName).getId();
+        return iYeCommentService.delete(comment_id,user_id);
     }
 
 

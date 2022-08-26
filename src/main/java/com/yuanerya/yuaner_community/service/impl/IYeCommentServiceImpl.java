@@ -42,9 +42,14 @@ public class IYeCommentServiceImpl extends ServiceImpl<YeCommentMapper, YeCommen
     }
 
     @Override
-    public ApiResult delete(String comment_id) {
+    public ApiResult delete(String comment_id,String user_id) {
         try {
-            yeCommentMapper.deleteById(comment_id);
+            if(yeCommentMapper.selectById(comment_id).getUserId().equals(user_id)){
+                yeCommentMapper.deleteById(comment_id);}
+            else{
+                return ApiResult.failed("非法操作，您只能删除你自己的评论！");
+            }
+
         }catch (Exception e){
             return ApiResult.failed("操作失败");
         }

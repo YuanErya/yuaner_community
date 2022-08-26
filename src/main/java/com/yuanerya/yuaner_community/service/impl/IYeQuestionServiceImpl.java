@@ -51,11 +51,16 @@ public class IYeQuestionServiceImpl extends ServiceImpl<YeQuestionMapper, YeQues
     }
 
     @Override
-    public ApiResult delete(String question_id) {
+    public ApiResult delete(String question_id,String user_id) {
         try {
-        yeQuestionMapper.deleteById(question_id);
-        yeAnswerMapper.deleteByQuestionId(question_id);
-        yeCommentMapper.deleteByQuestionId(question_id);
+            if(yeQuestionMapper.selectById(question_id).getUserId().equals(user_id)){
+                yeQuestionMapper.deleteById(question_id);
+                yeAnswerMapper.deleteByQuestionId(question_id);
+                yeCommentMapper.deleteByQuestionId(question_id);}
+            else {
+                return ApiResult.failed("非法操作，您只能删除你自己发布的问题！");
+            }
+
     }catch (Exception e){
             return ApiResult.failed("操作失败");
         }

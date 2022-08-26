@@ -30,5 +30,5 @@ public interface IYeQuestionService extends IService<YeQuestion> {
      * @param question_id 传入的问题的id
      * @return 返回操作成功
      */
-    ApiResult delete(String question_id);
+    ApiResult delete(String question_id,String user_id);
 }
