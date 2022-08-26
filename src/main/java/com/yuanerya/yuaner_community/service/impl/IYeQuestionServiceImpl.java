@@ -28,13 +28,24 @@ public class IYeQuestionServiceImpl extends ServiceImpl<YeQuestionMapper, YeQues
     @Autowired
     private YeCommentMapper yeCommentMapper;
 
+    /**
+     * 分页查询
+     * @param pageNo
+     * @param pageSize
+     * @return
+     */
     public Page<QuestionVO> getPage(Integer pageNo,Integer pageSize){
         Page page=new Page(pageNo,pageSize);
         yeQuestionMapper.getPage(page);
         return page;
     }
 
-
+    /**
+     * 创建一个新的问题
+     * @param dto
+     * @param user
+     * @return
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)//用于保证数据库的同步
     public YeQuestion create(CreateQuestionDTO dto, YeUser user) {
@@ -49,10 +60,17 @@ public class IYeQuestionServiceImpl extends ServiceImpl<YeQuestionMapper, YeQues
         return yq;
     }
 
+    /**
+     * 删除自己的问题
+     * @param question_id 传入的问题的id
+     * @param user_id
+     * @return
+     */
     @Override
     public ApiResult delete(String question_id,String user_id) {
         try {
             if(yeQuestionMapper.selectById(question_id).getUserId().equals(user_id)){
+                //检验操作者
                 yeQuestionMapper.deleteById(question_id);
                 yeAnswerMapper.deleteByQuestionId(question_id);
                 yeCommentMapper.deleteByQuestionId(question_id);}
@@ -66,10 +84,18 @@ public class IYeQuestionServiceImpl extends ServiceImpl<YeQuestionMapper, YeQues
         return ApiResult.success("操作成功,删除了："+question_id);
     }
 
+    /**
+     * 跟新自己的问题
+     * @param question_id
+     * @param user_id
+     * @param dto
+     * @return
+     */
     @Override
     public ApiResult checkAndUpdate(String question_id, String user_id, CreateQuestionDTO dto) {
         try {
             if(yeQuestionMapper.selectById(question_id).getUserId().equals(user_id)) {
+                //检验操作者
                 YeQuestion question=yeQuestionMapper.selectById(question_id);
                 question.setContent(dto.getContent());
                 question.setTitle(dto.getTitle());

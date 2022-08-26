@@ -22,6 +22,13 @@ public class IYeAnswerServiceImpl extends ServiceImpl<YeAnswerMapper,YeAnswer> i
     @Autowired
     private YeCommentMapper yeCommentMapper;
 
+    /**
+     * 创建一个新的回答
+     * @param dto
+     * @param user
+     * @param question_id
+     * @return
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)//用于保证数据库的同步
     public YeAnswer answer(AnswerAndCommentDTO dto, YeUser user, String question_id) {
@@ -35,10 +42,18 @@ public class IYeAnswerServiceImpl extends ServiceImpl<YeAnswerMapper,YeAnswer> i
         return answer;
     }
 
+    /**
+     * 删除回答
+     * @param answer_id
+     * @param user_id
+     * @return
+     */
     @Override
+    @Transactional(rollbackFor = Exception.class)//用于保证数据库的同步
     public ApiResult delete(String answer_id,String user_id) {
         try {
             if(yeAnswerMapper.selectById(answer_id).getUserId().equals(user_id)){
+                //判断语句实在检验操作用户是否为回答者
                 yeAnswerMapper.deleteById(answer_id);
                 yeCommentMapper.deleteByAnswerId(answer_id);}
             else{
@@ -51,10 +66,19 @@ public class IYeAnswerServiceImpl extends ServiceImpl<YeAnswerMapper,YeAnswer> i
         return ApiResult.success("操作成功，删除了："+answer_id);
     }
 
+    /**
+     * 更新回答
+     * @param answer_id
+     * @param user_id
+     * @param dto
+     * @return
+     */
     @Override
+    @Transactional(rollbackFor = Exception.class)//用于保证数据库的同步
     public ApiResult<String> checkAndUpdate(String answer_id, String user_id,AnswerAndCommentDTO dto) {
         try {
             if(yeAnswerMapper.selectById(answer_id).getUserId().equals(user_id)) {
+                //检验操作者
                 YeAnswer answer=yeAnswerMapper.selectById(answer_id);
                 answer.setContent(dto.getContent());
                 answer.setModifyTime(new Date());

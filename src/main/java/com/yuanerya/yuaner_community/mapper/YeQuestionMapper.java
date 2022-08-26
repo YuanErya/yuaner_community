@@ -10,6 +10,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface YeQuestionMapper extends BaseMapper<YeQuestion> {
 
-    public Page<QuestionVO> getPage(@Param("page") Page<QuestionVO> page);
+    /**
+     * 分页查询
+     * @param page
+     * @return
+     */
+    Page<QuestionVO> getPage(@Param("page") Page<QuestionVO> page);
 
 }

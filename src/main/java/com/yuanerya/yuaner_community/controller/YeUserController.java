@@ -23,6 +23,11 @@ public class YeUserController {
     @Resource
     private IYeUserService iYeUserService;
 
+    /**
+     * 注册
+     * @param dto
+     * @return
+     */
     @PostMapping("/register")
     public ApiResult register(@Valid  @RequestBody RegisterDTO dto){
         YeUser user=iYeUserService.register(dto);

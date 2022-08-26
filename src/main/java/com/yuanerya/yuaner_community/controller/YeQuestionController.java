@@ -115,6 +115,14 @@ public class YeQuestionController {
         return iYeQuestionService.delete(question_id,user_id);
     }
 
+    /**
+     * 修改问题
+     * @param token
+     * @param question_id
+     * @param dto
+     * @return
+     */
+
     @PutMapping("/update/question")
     public ApiResult updateAnswer(@RequestHeader(value = HEADER_STRING) String token,
                                   @RequestHeader(value = "question_id") String question_id,
@@ -138,6 +146,14 @@ public class YeQuestionController {
         return iYeAnswerService.delete(answer_id,user_id);
     }
 
+
+    /**
+     * 修改回答
+     * @param token
+     * @param answer_id
+     * @param dto
+     * @return
+     */
     @PutMapping("/update/answer")
     public ApiResult updateAnswer(@RequestHeader(value = HEADER_STRING) String token,
                                    @RequestHeader(value ="answer_id")  String answer_id,

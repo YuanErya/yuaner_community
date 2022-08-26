@@ -33,5 +33,13 @@ public interface IYeQuestionService extends IService<YeQuestion> {
      */
     ApiResult delete(String question_id,String user_id);
 
+    /**
+     * 检查发起该操作的是否为发布该问题的用户
+     * 并修改发布的问题的内容
+     * @param question_id
+     * @param user_id
+     * @param dto
+     * @return
+     */
     ApiResult checkAndUpdate(String question_id,String user_id, CreateQuestionDTO dto);
 }
