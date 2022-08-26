@@ -50,4 +50,22 @@ public class IYeAnswerServiceImpl extends ServiceImpl<YeAnswerMapper,YeAnswer> i
         }
         return ApiResult.success("操作成功，删除了："+answer_id);
     }
+
+    @Override
+    public ApiResult<String> checkAndUpdate(String answer_id, String user_id,AnswerAndCommentDTO dto) {
+        try {
+            if(yeAnswerMapper.selectById(answer_id).getUserId().equals(user_id)) {
+                YeAnswer answer=yeAnswerMapper.selectById(answer_id);
+                answer.setContent(dto.getContent());
+                answer.setModifyTime(new Date());
+                yeAnswerMapper.updateById(answer);
+            }
+            else{
+                return ApiResult.failed("非法操作，您只能修改你自己的回答！");
+            }
+        }catch (Exception e){
+            return ApiResult.failed("操作失败");
+        }
+        return ApiResult.success("修改成功，修改的回答为：" + answer_id);
+    }
 }

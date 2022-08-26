@@ -115,6 +115,16 @@ public class YeQuestionController {
         return iYeQuestionService.delete(question_id,user_id);
     }
 
+    @PutMapping("/update/question")
+    public ApiResult updateAnswer(@RequestHeader(value = HEADER_STRING) String token,
+                                  @RequestHeader(value = "question_id") String question_id,
+                                  @RequestBody CreateQuestionDTO dto
+                                  ){
+        String userName = JwtUtil.parseToken(token);
+        String user_id = iYeUserService.getYeUserByUsername(userName).getId();
+        return iYeQuestionService.checkAndUpdate(question_id,user_id,dto);
+    }
+
     /**
      * 删除回答
      * @param answer_id
@@ -127,6 +137,16 @@ public class YeQuestionController {
         String user_id = iYeUserService.getYeUserByUsername(userName).getId();
         return iYeAnswerService.delete(answer_id,user_id);
     }
+
+    @PutMapping("/update/answer")
+    public ApiResult updateAnswer(@RequestHeader(value = HEADER_STRING) String token,
+                                   @RequestHeader(value ="answer_id")  String answer_id,
+                                   @RequestBody AnswerAndCommentDTO dto){
+        String userName = JwtUtil.parseToken(token);
+        String user_id = iYeUserService.getYeUserByUsername(userName).getId();
+        return iYeAnswerService.checkAndUpdate(answer_id,user_id,dto);
+    }
+
 
     /**
      * 删除评论
@@ -141,5 +161,20 @@ public class YeQuestionController {
         return iYeCommentService.delete(comment_id,user_id);
     }
 
+    /**\
+     * 修改已经发表的评论
+     * @param token
+     * @param comment_id
+     * @param dto
+     * @return
+     */
+    @PutMapping("/update/comment")
+    public ApiResult updateComment(@RequestHeader(value = HEADER_STRING) String token,
+                                   @RequestHeader(value ="comment_id")  String comment_id,
+                                   @RequestBody AnswerAndCommentDTO dto){
+        String userName = JwtUtil.parseToken(token);
+        String user_id = iYeUserService.getYeUserByUsername(userName).getId();
+        return iYeCommentService.checkAndUpdate(comment_id,user_id,dto);
+    }
 
 }

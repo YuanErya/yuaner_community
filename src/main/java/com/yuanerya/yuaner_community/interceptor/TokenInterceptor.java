@@ -55,6 +55,7 @@ public class TokenInterceptor implements HandlerInterceptor {
         List<String> protectedPaths = new ArrayList<String>();
         //向list中添加需要保护拦截的请求
         protectedPaths.add("/user/info");
+        protectedPaths.add("/user/getFootprint");
         protectedPaths.add("/user/logout");
         protectedPaths.add("/question/*");
         boolean bFind = false;

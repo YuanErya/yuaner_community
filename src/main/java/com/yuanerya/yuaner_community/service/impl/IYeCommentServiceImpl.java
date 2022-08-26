@@ -56,4 +56,23 @@ public class IYeCommentServiceImpl extends ServiceImpl<YeCommentMapper, YeCommen
         return ApiResult.success("操作成功，删除了："+comment_id);
     }
 
+    @Override
+    public ApiResult checkAndUpdate(String comment_id, String user_id,AnswerAndCommentDTO dto) {
+        try {
+            if(yeCommentMapper.selectById(comment_id).getUserId().equals(user_id)) {
+                YeComment comment=yeCommentMapper.selectById(comment_id);
+                comment.setContent(dto.getContent());
+                comment.setModifyTime(new Date());
+                yeCommentMapper.updateById(comment);
+            }
+            else{
+                return ApiResult.failed("非法操作，您只能修改你自己的评论！");
+            }
+
+        }catch (Exception e){
+            return ApiResult.failed("操作失败");
+        }
+        return ApiResult.success("修改成功，修改的评论为：" + comment_id);
+    }
+
 }

@@ -1,6 +1,5 @@
 package com.yuanerya.yuaner_community.service.impl;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.vdurmont.emoji.EmojiParser;
@@ -66,4 +65,24 @@ public class IYeQuestionServiceImpl extends ServiceImpl<YeQuestionMapper, YeQues
         }
         return ApiResult.success("操作成功,删除了："+question_id);
     }
-}
+
+    @Override
+    public ApiResult checkAndUpdate(String question_id, String user_id, CreateQuestionDTO dto) {
+        try {
+            if(yeQuestionMapper.selectById(question_id).getUserId().equals(user_id)) {
+                YeQuestion question=yeQuestionMapper.selectById(question_id);
+                question.setContent(dto.getContent());
+                question.setTitle(dto.getTitle());
+                question.setModifyTime(new Date());
+                yeQuestionMapper.updateById(question);
+            }
+            else{
+                return ApiResult.failed("非法操作，您只能修改你自己发布的问题！");
+            }
+        }catch (Exception e){
+            return ApiResult.failed("操作失败");
+        }
+        return ApiResult.success("修改成功，修改的问题为：" + question_id);
+    }
+    }
+
