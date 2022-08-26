@@ -10,13 +10,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4286836a-cf1d-4452-8a67-3a265a3cb161" name="Default Changelist" comment="完成了问题回答">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/model/vo/FootPrintVO.java" afterDir="false" />
+    <list default="true" id="4286836a-cf1d-4452-8a67-3a265a3cb161" name="Default Changelist" comment="完成了用户可以获取自己的所有问题、所有回答、所有评论。">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/controller/YeQuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/controller/YeQuestionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/controller/YeUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/controller/YeUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/mapper/YeAnswerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/mapper/YeAnswerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/mapper/YeCommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/mapper/YeCommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeAnswerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeAnswerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeCommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeCommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeQuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeAnswerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeAnswerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeCommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeCommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeQuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeQuestionServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/controller/YeQuestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/controller/YeQuestionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/mapper/YeCommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/mapper/YeCommentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/impl/IYeQuestionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/impl/IYeQuestionServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/impl/IYeUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/impl/IYeUserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +114,8 @@
       <workItem from="1661307134233" duration="10037000" />
       <workItem from="1661319606532" duration="16084000" />
       <workItem from="1661386663477" duration="34842000" />
-      <workItem from="1661481967914" duration="3016000" />
+      <workItem from="1661481967914" duration="3854000" />
+      <workItem from="1661485872501" duration="4497000" />
     </task>
     <task id="LOCAL-00001" summary="完成基本结构的搭建，正在完善注册功能">
       <created>1661309473732</created>
@@ -175,7 +187,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661437701253</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="完成了用户可以获取自己的所有问题、所有回答、所有评论。">
+      <created>1661485216942</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1661485216942</updated>
+    </task>
+    <task id="LOCAL-00012" summary="完成了用户可以获取自己的所有问题、所有回答、所有评论。">
+      <created>1661485223160</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1661485223160</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,25 +228,26 @@
     <MESSAGE value="修改了查询的方法" />
     <MESSAGE value="完成了问题发布" />
     <MESSAGE value="完成了问题回答" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了问题回答" />
+    <MESSAGE value="完成了用户可以获取自己的所有问题、所有回答、所有评论。" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了用户可以获取自己的所有问题、所有回答、所有评论。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="227" y="18" key="#Plugins" timestamp="1661245710257">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="227" y="18" key="#Plugins/0.0.1536.816@0.0.1536.816" timestamp="1661245710257" />
-    <state x="361" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1661421780478">
+    <state x="238" y="102" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1661485927450">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="361" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1661421780478" />
+    <state x="238" y="102" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1661485927450" />
     <state x="491" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1661246382767">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="491" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1661246382767" />
-    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1661483530841">
+    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1661498387239">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1661483530841" />
+    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1661498387239" />
     <state x="335" y="331" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1661313510050">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -233,42 +260,42 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1661431660969" />
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1661484241813">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1661496726218">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1661484241813" />
-    <state width="1493" height="293" key="GridCell.Tab.0.bottom" timestamp="1661440168269">
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1661496726218" />
+    <state width="1493" height="293" key="GridCell.Tab.0.bottom" timestamp="1661485845667">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="293" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661440168269" />
-    <state width="1493" height="293" key="GridCell.Tab.0.center" timestamp="1661440168269">
+    <state width="1493" height="293" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661485845667" />
+    <state width="1493" height="293" key="GridCell.Tab.0.center" timestamp="1661485845667">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="293" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1661440168269" />
-    <state width="1493" height="293" key="GridCell.Tab.0.left" timestamp="1661440168269">
+    <state width="1493" height="293" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1661485845667" />
+    <state width="1493" height="293" key="GridCell.Tab.0.left" timestamp="1661485845667">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="293" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1661440168269" />
-    <state width="1493" height="293" key="GridCell.Tab.0.right" timestamp="1661440168269">
+    <state width="1493" height="293" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1661485845667" />
+    <state width="1493" height="293" key="GridCell.Tab.0.right" timestamp="1661485845667">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="293" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1661440168269" />
-    <state width="1493" height="293" key="GridCell.Tab.1.bottom" timestamp="1661440168269">
+    <state width="1493" height="293" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1661485845667" />
+    <state width="1493" height="293" key="GridCell.Tab.1.bottom" timestamp="1661485845667">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="293" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661440168269" />
-    <state width="1493" height="293" key="GridCell.Tab.1.center" timestamp="1661440168269">
+    <state width="1493" height="293" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661485845667" />
+    <state width="1493" height="293" key="GridCell.Tab.1.center" timestamp="1661485845667">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="293" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1661440168269" />
-    <state width="1493" height="293" key="GridCell.Tab.1.left" timestamp="1661440168269">
+    <state width="1493" height="293" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1661485845667" />
+    <state width="1493" height="293" key="GridCell.Tab.1.left" timestamp="1661485845667">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="293" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1661440168269" />
-    <state width="1493" height="293" key="GridCell.Tab.1.right" timestamp="1661440168269">
+    <state width="1493" height="293" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1661485845667" />
+    <state width="1493" height="293" key="GridCell.Tab.1.right" timestamp="1661485845667">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="293" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1661440168269" />
+    <state width="1493" height="293" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1661485845667" />
     <state width="1493" height="258" key="GridCell.Tab.2.bottom" timestamp="1661319573603">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

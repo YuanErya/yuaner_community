@@ -2,6 +2,7 @@ package com.yuanerya.yuaner_community.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.yuanerya.yuaner_community.common.api.ApiResult;
 import com.yuanerya.yuaner_community.model.dto.CreateQuestionDTO;
 import com.yuanerya.yuaner_community.model.entity.YeQuestion;
 import com.yuanerya.yuaner_community.model.entity.YeUser;
@@ -23,4 +24,11 @@ public interface IYeQuestionService extends IService<YeQuestion> {
      * @return
      */
     YeQuestion create(CreateQuestionDTO dto, YeUser user);
+
+    /**
+     * 根据问题的ID删除问题以及它下属的回答和评论
+     * @param question_id 传入的问题的id
+     * @return 返回操作成功
+     */
+    ApiResult delete(String question_id);
 }

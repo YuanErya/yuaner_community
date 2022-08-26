@@ -3,6 +3,7 @@ package com.yuanerya.yuaner_community.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import com.vdurmont.emoji.EmojiParser;
+import com.yuanerya.yuaner_community.common.api.ApiResult;
 import com.yuanerya.yuaner_community.mapper.YeCommentMapper;
 import com.yuanerya.yuaner_community.model.dto.AnswerAndCommentDTO;
 
@@ -39,4 +40,15 @@ public class IYeCommentServiceImpl extends ServiceImpl<YeCommentMapper, YeCommen
         yeCommentMapper.insert(comment);
         return comment;
     }
+
+    @Override
+    public ApiResult delete(String comment_id) {
+        try {
+            yeCommentMapper.deleteById(comment_id);
+        }catch (Exception e){
+            return ApiResult.failed("操作失败");
+        }
+        return ApiResult.success("操作成功，删除了："+comment_id);
+    }
+
 }

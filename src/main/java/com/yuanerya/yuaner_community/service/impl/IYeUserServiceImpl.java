@@ -93,6 +93,11 @@ public class IYeUserServiceImpl extends ServiceImpl<YeUserMapper,YeUser> impleme
         return yeUserMapper.selectOne(new LambdaQueryWrapper<YeUser>().eq(YeUser::getUsername, username));
     }
 
+    /**
+     * 用户可以获取自己的所有问题、所有回答、所有评论。
+     * @param userId 获取到用户的ID
+     * @return
+     */
     @Override
     public FootPrintVO getFootprint(String userId) {
         FootPrintVO footprint = new FootPrintVO();

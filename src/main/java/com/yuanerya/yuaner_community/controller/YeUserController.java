@@ -64,7 +64,7 @@ public class YeUserController {
     /**
      * 获取我所发布的问题，回答和评论
      * @param token 通过Header获取到tokren,进行解析得到用户名根据UserName再到数据库中进行查询，获取到用户ID
-     * @return
+     * @return 返回vo
      */
     @GetMapping("/getFootprint")
     public ApiResult<FootPrintVO> getFootprint(@RequestHeader(value = HEADER_STRING) String token){

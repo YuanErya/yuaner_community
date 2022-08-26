@@ -35,34 +35,37 @@ public class YeQuestionController {
 
     /**
      * 分页查询问题
+     *
      * @param pageNo
      * @param pageSize
      * @return
      */
     @GetMapping("/list")
-    public ApiResult<Page<QuestionVO>> list(@RequestParam(value = "pageNo", defaultValue = "1")  Integer pageNo,
-                                            @RequestParam(value = "size", defaultValue = "10") Integer pageSize){
+    public ApiResult<Page<QuestionVO>> list(@RequestParam(value = "pageNo", defaultValue = "1") Integer pageNo,
+                                            @RequestParam(value = "size", defaultValue = "10") Integer pageSize) {
         Page<QuestionVO> pageList = iYeQuestionService.getPage(pageNo, pageSize);
         return ApiResult.success(pageList);
     }
 
     /**
      * 创建问题
+     *
      * @param token
      * @param dto
      * @return
      */
     @PostMapping("/create")
     public ApiResult<YeQuestion> create(@RequestHeader(value = HEADER_STRING) String token,
-                                        @RequestBody CreateQuestionDTO dto){
+                                        @RequestBody CreateQuestionDTO dto) {
         String userName = JwtUtil.parseToken(token);
-        YeUser user=iYeUserService.getYeUserByUsername(userName);
-        YeQuestion question=iYeQuestionService.create(dto,user);
+        YeUser user = iYeUserService.getYeUserByUsername(userName);
+        YeQuestion question = iYeQuestionService.create(dto, user);
         return ApiResult.success(question);
     }
 
     /**
      * 回答问题
+     *
      * @param token
      * @param question_id 需要携带当前所在问题的ID
      * @param dto
@@ -71,15 +74,16 @@ public class YeQuestionController {
     @PostMapping("/answer")
     public ApiResult<YeAnswer> answer(@RequestHeader(value = HEADER_STRING) String token,
                                       @RequestHeader(value = "question_id") String question_id,
-                                      @RequestBody AnswerAndCommentDTO dto){
+                                      @RequestBody AnswerAndCommentDTO dto) {
         String userName = JwtUtil.parseToken(token);
-        YeUser user=iYeUserService.getYeUserByUsername(userName);
-        YeAnswer answer=iYeAnswerService.answer(dto,user,question_id);
+        YeUser user = iYeUserService.getYeUserByUsername(userName);
+        YeAnswer answer = iYeAnswerService.answer(dto, user, question_id);
         return ApiResult.success(answer);
     }
 
     /**
      * 对 问题的回答进行评论
+     *
      * @param token
      * @param answer_id
      * @param dto
@@ -88,13 +92,47 @@ public class YeQuestionController {
     @PostMapping("/answer/comment")
     public ApiResult<YeComment> comment(@RequestHeader(value = HEADER_STRING) String token,
                                         @RequestHeader(value = "answer_id") String answer_id,
-                                        @RequestBody AnswerAndCommentDTO dto){
+                                        @RequestBody AnswerAndCommentDTO dto) {
         String userName = JwtUtil.parseToken(token);
-        YeUser user=iYeUserService.getYeUserByUsername(userName);
-        YeComment comment=iYeCommentService.comment(dto,user,answer_id);
-return ApiResult.success(comment);
+        YeUser user = iYeUserService.getYeUserByUsername(userName);
+        YeComment comment = iYeCommentService.comment(dto, user, answer_id);
+        return ApiResult.success(comment);
 
 
+    }
+
+    /**
+     *删除问题
+     * @param question_id
+     * @return 操作成功则返回删除的问题的id
+     */
+
+    @DeleteMapping("/delete/question")
+    public ApiResult deleteQuestion(@RequestHeader(value = HEADER_STRING) String token,
+                                    @RequestHeader(value = "question_id") String question_id) {
+        return iYeQuestionService.delete(question_id);
+    }
+
+    /**
+     * 删除回答
+     * @param answer_id
+     * @return 操作成功则返回删除的回答的id
+     */
+    @DeleteMapping("/delete/answer")
+    public ApiResult deleteAnswer(@RequestHeader(value = HEADER_STRING) String token,
+                                  @RequestHeader(value = "answer_id") String answer_id) {
+        return iYeAnswerService.delete(answer_id);
+    }
+
+    /**
+     * 删除评论
+     * @param comment_id
+     * @return 操作成功则返回删除的评论的id
+     */
+    @DeleteMapping("/delete/comment")
+    public ApiResult deleteComment(@RequestHeader(value = HEADER_STRING) String token,
+                                   @RequestHeader(value = "comment_id") String comment_id) {
+        return iYeCommentService.delete(comment_id);
     }
 
 
