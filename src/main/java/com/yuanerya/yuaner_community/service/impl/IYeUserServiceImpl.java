@@ -109,6 +109,4 @@ public class IYeUserServiceImpl extends ServiceImpl<YeUserMapper,YeUser> impleme
                 new LambdaQueryWrapper<YeComment>().eq(YeComment::getUserId,userId)));
         return footprint;
     }
-
-
 }
