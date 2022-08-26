@@ -10,24 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4286836a-cf1d-4452-8a67-3a265a3cb161" name="Default Changelist" comment="完善了删除功能（校验删除的是否为本人所有）">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/controller/YeQuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/controller/YeQuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/interceptor/TokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/interceptor/TokenInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeAnswerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeAnswerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeCommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeCommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/IYeQuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeAnswerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeAnswerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeCommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeCommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeQuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuanerya/yuaner_community/service/impl/IYeQuestionServiceImpl.java" afterDir="false" />
+    <list default="true" id="4286836a-cf1d-4452-8a67-3a265a3cb161" name="Default Changelist" comment="完成了修改问题，回答，评论的功能。">
       <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/controller/YeQuestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/controller/YeQuestionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/interceptor/TokenInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/interceptor/TokenInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/mapper/YeCommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/mapper/YeCommentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/IYeAnswerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/IYeAnswerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/IYeCommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/IYeCommentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/IYeQuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/IYeQuestionService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/impl/IYeAnswerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/impl/IYeAnswerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/impl/IYeCommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/impl/IYeCommentServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/impl/IYeQuestionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yuanerya/yuaner_community/service/impl/IYeQuestionServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +103,7 @@
       <workItem from="1661386663477" duration="34842000" />
       <workItem from="1661481967914" duration="3854000" />
       <workItem from="1661485872501" duration="5857000" />
-      <workItem from="1661500616087" duration="3778000" />
+      <workItem from="1661500616087" duration="4171000" />
     </task>
     <task id="LOCAL-00001" summary="完成基本结构的搭建，正在完善注册功能">
       <created>1661309473732</created>
@@ -224,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661499781548</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="完成了修改问题，回答，评论的功能。">
+      <created>1661506249318</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1661506249318</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +247,8 @@
     <MESSAGE value="完成了用户可以获取自己的所有问题、所有回答、所有评论。" />
     <MESSAGE value="完成了删除功能" />
     <MESSAGE value="完善了删除功能（校验删除的是否为本人所有）" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善了删除功能（校验删除的是否为本人所有）" />
+    <MESSAGE value="完成了修改问题，回答，评论的功能。" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了修改问题，回答，评论的功能。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="227" y="18" key="#Plugins" timestamp="1661245710257">
@@ -289,38 +283,38 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1661500196140" />
-    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1661505605351">
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1661506325852">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661505605351" />
-    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1661505605351">
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661506325852" />
+    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1661506325852">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1661505605351" />
-    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1661505605351">
+    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1661506325852" />
+    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1661506325852">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1661505605351" />
-    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1661505605351">
+    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1661506325852" />
+    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1661506325852">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1661505605351" />
-    <state width="1493" height="191" key="GridCell.Tab.1.bottom" timestamp="1661505605351">
+    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1661506325852" />
+    <state width="1493" height="191" key="GridCell.Tab.1.bottom" timestamp="1661506325852">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661505605351" />
-    <state width="1493" height="191" key="GridCell.Tab.1.center" timestamp="1661505605351">
+    <state width="1493" height="191" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1661506325852" />
+    <state width="1493" height="191" key="GridCell.Tab.1.center" timestamp="1661506325852">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1661505605351" />
-    <state width="1493" height="191" key="GridCell.Tab.1.left" timestamp="1661505605351">
+    <state width="1493" height="191" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1661506325852" />
+    <state width="1493" height="191" key="GridCell.Tab.1.left" timestamp="1661506325852">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1661505605351" />
-    <state width="1493" height="191" key="GridCell.Tab.1.right" timestamp="1661505605351">
+    <state width="1493" height="191" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1661506325852" />
+    <state width="1493" height="191" key="GridCell.Tab.1.right" timestamp="1661506325852">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1661505605351" />
+    <state width="1493" height="191" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1661506325852" />
     <state width="1493" height="258" key="GridCell.Tab.2.bottom" timestamp="1661319573603">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
